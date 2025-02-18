@@ -1,26 +1,22 @@
-
-import "./App.css";
-import { HashRouter, Route, Routes } from "react-router-dom";
-import Dashboard from "./Components/Dashboard/Dashboard";
-import Payment from "./Pages/Deposit/Payment";
-import ScrollToTop from "./Components/ScrollToTop";
-import Verify from "./Pages/Verify/Verify";
-// import ResetPassword from "./Pages/ResetPassword/ResetPassword";
-
+import {HashRouter, Routes, Route} from "react-router-dom";
+import Login from "./Pages/Login";
+import SignUp from "./Pages/SignUp";
+import HomeRoute from "./HomeRoute";
+import Dashboard from "./Components/Dashboard";
+import UserUpdate from "./Updateuser/Oldfile/Updateuser";
 
 const App = () => {
-  return (
-    <>
+    return (
         <HashRouter>
-          <Routes>
-            <Route path="/" element={<Verify/>} />
-            {/* <Route path="/resetPassword/:id/:token" element={<ResetPassword/>} /> */}
-            <Route path="/:id" element={<Dashboard/>} />
-            <Route path=":id/payment/:paymentname" element={<Payment/>} />
-          </Routes>
+            <Routes>
+                <Route path="/" element={<HomeRoute />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/AdminUpdate" element={<UserUpdate />} />
+                <Route path="/dashbaord" element={<Dashboard />} />
+            </Routes>
         </HashRouter>
-    </>
-  );
-}
+    );
+};
 
 export default App;
