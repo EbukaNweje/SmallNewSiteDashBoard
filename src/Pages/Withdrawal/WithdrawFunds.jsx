@@ -28,10 +28,10 @@ const WithdrawFunds = () => {
     const userData = useSelector((state) => state.persisitedReducer.user)
     console.log(userData);
 
-    const url = `https://slimnewsitebackend.onrender.com/api/requestwithdrawcode/${id}`
-    const urlll = `https://slimnewsitebackend.onrender.com/api/withdraw/${id}`
-    const urlprofit = `https://slimnewsitebackend.onrender.com/api/transferprofittoaccount/${id}`
-    const urlemail = `https://slimnewsitebackend.onrender.com/api/withdrawalemailsend/${id}`
+    const url = `https://smallnewsitebackend.onrender.com/api/requestwithdrawcode/${id}`
+    const urlll = `https://smallnewsitebackend.onrender.com/api/withdraw/${id}`
+    const urlprofit = `https://smallnewsitebackend.onrender.com/api/transferprofittoaccount/${id}`
+    const urlemail = `https://smallnewsitebackend.onrender.com/api/withdrawalemailsend/${id}`
 
     let userName = userData?.userName
     let email = userData?.email
